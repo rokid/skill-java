@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<included>
+
+  <!-- spring boot logging 的基础配置 -->
+  <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+  <!-- 文件保存路径配置 -->
+  <property name="LOG_PATH" value="${LOG_PATH:-${LOG_TEMP:-${java.io.tmpdir:-/home/admin/logs}}}"/>
+
+    <!-- DEBUG日志 -->
+    <appender name="DEBUG_FILE"
+      class="ch.qos.logback.core.rolling.RollingFileAppender">
+      <encoder>
+        <pattern>${FILE_LOG_PATTERN}</pattern>
+      </encoder>
+      <file>${LOG_PATH}/debug.log</file>
+      <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+        <fileNamePattern>${LOG_PATH}/debug.log.%d{yyy-MM-dd-HH}</fileNamePattern>
+        <maxHistory>240</maxHistory>
+      </rollingPolicy>
+    </appender>
+
+    <!-- RPC日志 -->
+    <appender name="RPC_FILE"
+      class="ch.qos.logback.core.rolling.RollingFileAppender">
+      <encoder>
+        <pattern>${FILE_LOG_PATTERN}</pattern>
+      </encoder>
+      <file>${LOG_PATH}/rpc.log</file>
+      <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+        <fileNamePattern>${LOG_PATH}/rpc.log.%d{yyy-MM-dd-HH}</fileNamePattern>
+        <maxHistory>240</maxHistory>
+      </rollingPolicy>
+    </appender>
+
+    <!-- ERROR日志 -->
+    <appender name="ERROR_FILE"
+      class="ch.qos.logback.core.rolling.RollingFileAppender">
+      <encoder>
+        <pattern>${FILE_LOG_PATTERN}</pattern>
+      </encoder>
+      <file>${LOG_PATH}/error.log</file>
+      <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+        <fileNamePattern>${LOG_PATH}/error.log.%d{yyy-MM-dd-HH}</fileNamePattern>
+        <maxHistory>240</maxHistory>
+      </rollingPolicy>
+      <filter class="ch.qos.logback.classic.filter.LevelFilter">
+        <level>ERROR</level>
+        <onMatch>ACCEPT</onMatch>
+        <onMismatch>DENY</onMismatch>
+      </filter>
+    </appender>
+
+    <logger name="io.grpc" level="DEBUG" additivity="false">
+      <appender-ref ref="RPC_FILE"/>
+      <appender-ref ref="ERROR_FILE"/>
+    </logger>
+
+    <root level="${logLevel:-INFO}">
+      <appender-ref ref="DEBUG_FILE"/>
+      <appender-ref ref="ERROR_FILE"/>
+    </root>
+
+</included>

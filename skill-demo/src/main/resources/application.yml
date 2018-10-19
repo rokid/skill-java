@@ -1,0 +1,17 @@
+info:
+  app:
+    version: 1.0.0
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  profiles:
+    active: dev
+
+server:
+  servlet:
+    context-path: /skill-demo
+  port: 8084
+

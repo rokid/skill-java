@@ -1,0 +1,53 @@
+{
+  "context": {
+    "application": {
+      "applicationId": "R6BA1BC5510F419EA758CA8E01B8AD70",
+      "media": {
+        "state": "IDLE"
+      },
+      "voice": {
+        "state": "IDLE"
+      }
+    },
+    "device": {
+      "basic": {
+        "locale": "zh-cn",
+        "timestamp": 1520306823438,
+        "vendor": "37F1E69736774C1690AB7044DB9BE2E7"
+      },
+      "location": {},
+      "media": {
+        "state": "IDLE"
+      },
+      "voice": {
+        "state": "IDLE"
+      }
+    },
+    "user": {}
+  },
+  "request": {
+    "content": {
+      "intent": "eat",
+      "sentence": "打开我想吃汉堡",
+      "slots": {
+        "domain": {
+          "origin": "我想吃汉堡",
+          "type": "app",
+          "value": "custom.skill.RD191DD0EA3A44439B6C25EB2475FAD6"
+        },
+        "openaction": {
+          "type": "openaction",
+          "value": "打开"
+        }
+      }
+    },
+    "reqId": "CC1238A3BBD74DAA96F4F47CC5FE6C3A",
+    "reqType": "INTENT"
+  },
+  "session": {
+    "attributes": {},
+    "newSession": false,
+    "sessionId": "DD961DE9330D4BD6BB102CDEA93A6C96"
+  },
+  "version": "2.0.0"
+}
