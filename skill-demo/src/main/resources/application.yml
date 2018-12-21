@@ -1,6 +1,7 @@
 info:
   app:
     version: 1.0.0
+
 spring:
   http:
     encoding:
@@ -8,10 +9,12 @@ spring:
       enabled: true
       force: true
   profiles:
-    active: dev
+    active: local
+  application:
+    name: skill-demo
 
 server:
   servlet:
     context-path: /skill-demo
-  port: 8084
+  port: 8080
 

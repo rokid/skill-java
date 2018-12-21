@@ -10,7 +10,7 @@
   <packaging>jar</packaging>
 
   <name>skill-demo</name>
-  <description>Demo project for Spring Boot</description>
+  <description>rokid skill demo use spring boot 2.x</description>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -28,7 +28,7 @@
   <dependencies>
     <dependency>
       <groupId>com.rokid</groupId>
-      <artifactId>skill-kit4j</artifactId>
+      <artifactId>skill-kit</artifactId>
       <version>1.0.0</version>
     </dependency>
 
@@ -84,7 +84,7 @@
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
-      <version>19.0</version>
+      <version>23.0</version>
     </dependency>
   </dependencies>
 
@@ -97,6 +97,5 @@
       </plugin>
     </plugins>
   </build>
-
 
 </project>

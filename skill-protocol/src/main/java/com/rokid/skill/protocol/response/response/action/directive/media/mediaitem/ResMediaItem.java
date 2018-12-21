@@ -21,6 +21,6 @@ public class ResMediaItem {
     private String token;
     private String type;
     private String url;
-    private long offsetInMilliseconds;
+    private Long offsetInMilliseconds;
 
 }

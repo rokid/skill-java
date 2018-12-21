@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
 
-  <!-- spring boot logging 的基础配置 -->
-  <include resource="log-default.xml"/>
-
   <property name="LOG_PATH" value="${LOG_PATH:-${LOG_TEMP:-${java.io.tmpdir:-/tmp}}}"/>
+  <property name="CONSOLE_LOG_PATTERN"
+    value="%red(%d{yyyy-MM-dd HH:mm:ss.SSS}) %highlight(${LOG_LEVEL_PATTERN:-%5p}) ${PID:- } [%green(%X{traceId})] [%green(%X{nlpInfo})] --- [%t] %cyan(%-40.40logger{36}) : %m%n"/>
   <property name="FILE_LOG_PATTERN"
     value="%d{yyyy-MM-dd HH:mm:ss.SSS} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } [%X{traceId}] [%X{nlpInfo}] --- [%t] %-40.40logger{36} : %m%n"/>
-  <property name="CONSOLE_LOG_PATTERN"
-    value="%d{yyyy-MM-dd HH:mm:ss.SSS} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } [%X{traceId}] [%X{nlpInfo}] --- [%t] %-40.40logger{36} : %m%n"/>
+
+
   <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
     <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
       <Pattern>
@@ -17,7 +16,7 @@
     </encoder>
   </appender>
 
-  <logger name="com.rokid.skill.kit4j" level="INFO" additivity="false">
+  <logger name="com.rokid.skill.kit" level="INFO" additivity="false">
     <appender-ref ref="CONSOLE"/>
   </logger>
 

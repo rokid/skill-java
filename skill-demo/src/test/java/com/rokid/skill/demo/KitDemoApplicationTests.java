@@ -16,5 +16,4 @@ public class KitDemoApplicationTests {
 	public void contextLoads() {
 	}
 
-
 }

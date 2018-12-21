@@ -40,8 +40,14 @@ public class ResVoice extends ResDirective {
      * 停止播放操作，停止当前的VOICE播放
      */
     public static final String VOICE_ACTION_STOP = "STOP";
-
+    /**
+     * 是否关闭事件
+     */
     private boolean disableEvent;
+    /**
+     * 是否需要等待事件执行完毕
+     */
+    private boolean  noWait;
     /**
      * 播放控制操作 "PLAY/PAUSE/RESUME/STOP"
      */

@@ -2,7 +2,6 @@ package com.rokid.skill.demo;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration;
@@ -15,8 +14,8 @@ import org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConf
 @MapperScan(value = {"com.rokid.skill.demo.dao"})
 public class SkillDemoApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(SkillDemoApplication.class, args);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(SkillDemoApplication.class, args);
+  }
 
 }

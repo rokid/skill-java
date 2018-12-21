@@ -1,0 +1,83 @@
+{
+  "version": "2.0.0",
+  "session": {
+    "sessionId": "539A8F5E2C57467C85CF02480FC6FA56",
+    "newSession": false
+  },
+  "context": {
+    "application": {
+      "applicationId": "R35B2BADA5164AC69D4B3BC75F815DF9",
+      "media": {
+        "state": "IDLE"
+      },
+      "voice": {
+        "state": "IDLE"
+      }
+    },
+    "device": {
+      "basic": {
+        "vendor": "910B21C0AF987D67AE7B2D50D6197421",
+        "deviceType": "98EA4B548AEB4A329D21615B9ED060E5",
+        "deviceId": "0201021721000103",
+        "masterId": "877783516C7F46FFAACE83C9DCFF76AF",
+        "voicetrigger": "若琪",
+        "locale": "zh-cn",
+        "timestamp": 1544976048026
+      },
+      "media": {
+        "state": "IDLE"
+      },
+      "voice": {
+        "state": "IDLE"
+      },
+      "location": {
+        "country": "中国",
+        "state": "陕西",
+        "city": "西安",
+        "district": "",
+        "timeZone": "Asia/Shanghai"
+      },
+      "deviceMode": {
+        "userMode": {
+          "childMode": false
+        },
+        "linkage": {
+          "trigger": false
+        }
+      }
+    },
+    "user": {
+      "userId": "877783516C7F46FFAACE83C9DCFF76AF"
+    },
+    "voiceprint": {
+      "voiceprintId": "",
+      "voiceprintName": ""
+    }
+  },
+  "request": {
+    "reqType": "INTENT",
+    "reqId": "59c17bfa79af5c334857b659f1870386",
+    "content": {
+      "intent": "ROKID.INTENT.WELCOME",
+      "sentence": "今天空气质量怎么样",
+      "slots": {
+        "date": {
+          "pinyin": "jin1 tian1",
+          "type": "date",
+          "utc": "2018-12-17",
+          "value": "今天"
+        },
+        "how": {
+          "pinyin": "zen3 me5 yang4",
+          "type": "how",
+          "value": "怎么样"
+        },
+        "pm25": {
+          "pinyin": "kong1 qi4 zhi4 liang4",
+          "type": "pm25",
+          "value": "空气质量"
+        }
+      }
+    }
+  }
+}
