@@ -34,7 +34,7 @@ public class ReqBasic {
     /**
      * 设备当前时间，unix timestamp
      */
-    private String timestamp;
+    private Long timestamp;
     /**
      * 设备主人的Id;
      */

@@ -18,16 +18,16 @@ import lombok.ToString;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ResPickup extends ResDirective {
 
-    private boolean enable;
-    private long durationInMilliseconds;
-    /**
-     * 重试一次的TTS
-     */
-    private String retryTts;
-    private int retryCount;
+  private boolean enable;
+  private Long durationInMilliseconds;
+  /**
+   * 重试一次的TTS
+   */
+  private String retryTts;
+  private Integer retryCount;
 
-    public ResPickup() {
-        setType("pickup");
-    }
+  public ResPickup() {
+    setType("pickup");
+  }
 
 }
